@@ -11,13 +11,14 @@ def CG(A,b,x0,tol):
     r_new = A @ x - b
     p = - r_new
     iter = 0
-    while (la.norm(r_new) > tol and iter < N):
+    while (la.norm(r_new) > tol):
 
         r_prev = r_new
         rr = r_prev.T @ r_prev
-        alpha = rr / (p.T @ A @ p)
+        Ap = A @ p
+        alpha = rr / (p.T @ Ap)
         x = x + alpha * p
-        r_new = r_prev + alpha * A @ p
+        r_new = r_prev + alpha * Ap
         beta = (r_new.T @ r_new) / rr
         p = -r_new + beta * p
         
