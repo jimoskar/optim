@@ -1,3 +1,4 @@
+%matplotlib inline
 from IPython.display import set_matplotlib_formats
 set_matplotlib_formats('pdf', 'svg')
 
@@ -155,7 +156,7 @@ plt.show()
 
 def CG(A,b,x0,tol):
     """Conjugate gradient method."""
-    N=len(x0)
+    N = len(x0)
     x = x0
     r_new = A @ x - b
     p = - r_new
