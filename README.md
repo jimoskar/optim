@@ -1,2 +1,2 @@
 # optim
-Exercises form the course Optimization 1.
+Exercises and project form the course Optimization 1.
